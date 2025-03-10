@@ -2,7 +2,7 @@
 
 <app-user (calculate)="onCalculateInvestmentResults($event)"/>
 
-@if(showTable) {
-    <app-investment-results [result]="resultsData" />
+@if(resultsData()) {
+    <app-investment-results [result]="resultsData()" />
 }
 
