@@ -1,8 +1,8 @@
 <app-header />
 
-<app-user (calculate)="onCalculateInvestmentResults($event)"/>
+<app-user />
 
-@if(resultsData()) {
-    <app-investment-results [result]="resultsData()" />
-}
+
+<app-investment-results />
+
 
