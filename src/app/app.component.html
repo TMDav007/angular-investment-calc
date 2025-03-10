@@ -1,0 +1,8 @@
+<app-header />
+
+<app-user (calculate)="onCalculateInvestmentResults($event)"/>
+
+@if(showTable) {
+    <app-investment-results [result]="resultsData" />
+}
+
