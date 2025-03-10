@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { InvestmentResultsComponent } from './investment-results/investment-results.component';
-import { AnnualData, calculateInvestmentResults } from '../investment-results';
+import { AnnualData, InvestmentService, } from '../investment-results';
 
 @Component({
   selector: 'app-root',
@@ -12,21 +12,5 @@ import { AnnualData, calculateInvestmentResults } from '../investment-results';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  resultsData = signal<AnnualData[] | undefined>(undefined);
-  onCalculateInvestmentResults($event: {
-    initialInvestment: number;
-    expectedReturn: number;
-    annualInvestment: number;
-    duration: number;
-  }) {
-    const { initialInvestment, expectedReturn, annualInvestment, duration } =
-      $event;
-    this.resultsData.set(calculateInvestmentResults(
-      initialInvestment,
-      expectedReturn,
-      annualInvestment,
-      duration
-    ));
-  }
 
 }
