@@ -6,8 +6,6 @@ import { AnnualData, InvestmentService, } from '../investment-results';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [HeaderComponent, UserComponent, InvestmentResultsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
